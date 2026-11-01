@@ -1,0 +1,94 @@
+[
+	{
+	  "name" : "ШокВмешок",
+	  "delivery" : "None",
+	  "address": "Москвоский проспект 165",
+	  "type" : "cycle",
+	  "group": "no_limit",
+	  "start" : "2026-10-26",
+	  "unit": "руб",
+	  "better" : "lower",
+	  "price": ["Акция",700,600,500,400,250,100]
+	},
+	{
+	  "name" : "Привет пакет",
+	  "delivery" : "None",
+	  "address": "Фрунзе 17",
+	  "type" : "cycle",
+	  "group": "no_limit",
+	  "start" : "2026-10-26",
+	  "unit": "руб",
+	  "better" : "lower",
+	  "price": [100,"Акция",700,600,500,400,250]
+	},
+	{
+	  "name" : "Ямайка",
+	  "delivery" : "None",
+	  "address": "Фрунзе 21",
+	  "type" : "cycle",
+	  "group": "limit",
+	  "max": 900,
+	  "start" : "2026-10-26",
+	  "unit": "руб/кг",
+	  "better" : "lower",
+	  "price": [1199,899,499,199,2299,1999,1599]
+	},
+	{
+	  "name" : "Дежавю",
+	  "delivery" : "None",
+	  "address": "Фрунзе 15",
+	  "type" : "cycle",
+	  "group": "no_limit",
+	  "start" : "2026-10-26",
+	  "unit": "руб",
+	  "better" : "lower",
+	  "price": [200,1200,1000,800,600,400,300]
+	},
+	{
+	  "name" : "Ква-ква",
+	  "delivery" : "None",
+	  "address": "Фрунзе 15",
+	  "type" : "period",
+	  "group": "limit",
+	  "max" : 2500,
+	  "unit": "руб/кг",
+	  "better" : "lower",
+	  "periods": [
+	    {"from": "2026-10-17", "to": "2026-10-20", "price": 4495},
+		{"from": "2026-10-21", "to": "2026-10-24", "price": 3695},
+		{"from": "2026-10-25", "to": "2026-10-28", "price": 2995},
+		{"from": "2026-10-29", "to": "2026-11-01", "price": 2495},
+		{"from": "2026-11-02", "to": "2026-11-06", "price": 1995}
+		]
+	},
+	{
+	  "name" : "Вот это да!",
+	  "delivery" : "None",
+	  "address": "Фрунзе 19",
+	  "type" : "period",
+	  "group": "limit",
+	  "max" : 2200,
+	  "unit": "руб/кг",
+	  "better" : "lower",
+	  "periods": [
+	    {"from": "2026-10-26", "to": "2026-10-28", "price": 5499},
+		{"from": "2026-11-02", "to": "2026-11-08", "price": 4399},
+		{"from": "2026-11-09", "to": "2026-11-15", "price": 3299},
+		{"from": "2026-11-16", "to": "2026-11-22", "price": 2199},
+		{"from": "2026-11-23", "to": "2026-11-25", "price": 1099},
+		{"from": "2026-11-26", "to": "2026-11-28", "price": 549}
+		]
+	},
+	{
+	  "name" : "Мегахенд",
+	  "delivery" : "None",
+	  "address": "Ленинский проспект 16",
+	  "type" : "cycle",
+	  "group": "limit",
+	  "max" : 50,
+	  "start" : "2026-10-17",
+	  "unit": "%",
+	  "better" : "higher",
+	  "price": [null,null,10,10,20,30,40,40,50,50,60,70,80,90]
+	}
+]
