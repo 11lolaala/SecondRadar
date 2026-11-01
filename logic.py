@@ -103,7 +103,7 @@ def build_list_text():
         elif price == "Акция":
             text += f"{shop['name']} -- Акция\n"
         elif price == "expired":
-            text += f"{shop["name"]}: расписание цен закончилось, обнови данные\n"
+            text += f"{shop['name']}: расписание цен закончилось, обнови данные\n"
         else:
             text += f"{shop['name']} -- {price}{shop['unit']}\n"
     return text
