@@ -69,9 +69,10 @@ def find_limit_top(shops, today):
     return result, expired
 
 
-def build_where_text():
+def build_where_text(today=None):
     SHOPS = load_shops()
-    today = date.today()
+    if today is None:
+        today = date.today()
     promos = finds_promos(SHOPS, today)
     top_shops, expired_top = find_no_limit_top(SHOPS, today)
     other_shops, expired_other = find_limit_top(SHOPS, today)
@@ -92,9 +93,10 @@ def build_where_text():
     return text
 
 
-def build_list_text():
+def build_list_text(today=None):
     SHOPS = load_shops()
-    today = date.today()
+    if today is None:
+        today = date.today()
     text = ""
     for shop in SHOPS:
         price = get_price(shop, today)
@@ -108,8 +110,11 @@ def build_list_text():
             text += f"{shop['name']} -- {price}{shop['unit']}\n"
     return text
 
-if __name__ == "__main__":
-    print(date.today())
-    for shop in load_shops():
-        if shop["name"] == "Ква-ква":
-            print(get_price(shop, date.today()))
+
+def get_date(date_raw):
+    new_date = date_raw.strip()
+    new_date = new_date.replace("/", ".")
+    new_date = new_date.replace("-", ".")
+    new_date = f"{new_date}.{date.today().year}"
+    new_date = datetime.strptime(new_date, "%d.%m.%Y").date()
+    return new_date
